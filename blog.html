@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Boots' Patch Notes - The Scroll</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Patrick+Hand&display=swap');
+
+        :root {
+            --bg-color: #F5F0FA;
+            --text-color: #4B2A4E;
+            --gradient-start: #8A4FFF;
+            --gradient-end: #E89AFE;
+            --white-color: #FFFFFF;
+            --heading-font: 'Patrick Hand', cursive;
+            --body-font: 'Montserrat', sans-serif;
+        }
+
+        body { margin: 0; font-family: var(--body-font); background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        
+        /* Navigation (Same as Index) */
+        .main-header { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 10px 0; position: sticky; top: 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .header-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; text-decoration: none; color: var(--text-color); font-family: var(--heading-font); font-size: 2rem; }
+        .logo img { width: 50px; margin-right: 10px; }
+        .main-nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        .main-nav a { color: var(--text-color); text-decoration: none; font-weight: bold; padding: 10px 15px; }
+
+        /* Blog Layout */
+        .blog-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .blog-header { text-align: center; margin-bottom: 50px; }
+        .blog-header h1 { font-family: var(--heading-font); font-size: 4rem; color: var(--gradient-start); margin-bottom: 0; }
+
+        .editorial-entry { background: var(--white-color); padding: 40px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .category { display: inline-block; background: var(--gradient-start); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; }
+        .read-more { color: var(--gradient-start); text-decoration: none; font-weight: bold; }
+        .blog-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem; /* Makes it easier to read on a hot day! */
+}
+
+.blog-content h3 {
+    margin-top: 30px;
+    color: var(--gradient-start);
+}
+
+.blog-content ul {
+    margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="The%20Scroll.jpg" alt="Logo">
+                The Scroll
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#episodes">Episodes</a></li>
+                    <li><a href="index.html#listen">Listen Now</a></li>
+                    <li><a href="blog.html">Boots' Patch Notes</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="blog-container">
+        <header class="blog-header">
+            <h1>Boots' Patch Notes</h1>
+            <p>Deep dives and industry essays from LilacBoots.</p>
+        </header>
+        <section id="blog-feed"></section>
+    </main>
+
+    <script src="blog.js"></script>
+    <script>
+    const feed = document.getElementById('blog-feed');
+    blogPosts.forEach(post => {
+        feed.innerHTML += `
+            <article class="editorial-entry">
+                <span class="category">${post.category}</span>
+                <h2>${post.title}</h2>
+                <p><em>${post.date}</em></p>
+                <div class="blog-content">
+                    ${post.content}
+                </div>
+            </article>`;
+    });
+</script>
+</body>
+</html>

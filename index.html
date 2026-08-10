@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>The Scroll - Your Weekly Gaming Podcast</title>
+    <style>
+        /* --- Google Fonts Import --- */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Patrick+Hand&display=swap');
+
+        /* --- CSS Variables --- */
+        :root {
+            --bg-color: #F5F0FA;
+            --text-color: #4B2A4E;
+            --gradient-start: #8A4FFF;
+            --gradient-end: #E89AFE;
+            --white-color: #FFFFFF;
+            --heading-font: 'Patrick Hand', cursive;
+            --body-font: 'Montserrat', sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: var(--body-font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { font-family: var(--heading-font); font-weight: 400; }
+        h1 { font-size: 4rem; margin-bottom: 1rem; }
+        h2 { font-size: 3rem; text-align: center; margin-top: 40px; margin-bottom: 30px; }
+        img { max-width: 100%; height: auto; }
+
+        /* --- Header & Navigation --- */
+        .main-header {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; text-decoration: none; color: var(--text-color); font-family: var(--heading-font); font-size: 2rem; }
+        .logo img { width: 60px; margin-right: 15px; }
+
+        .main-nav ul { margin: 0; padding: 0; list-style: none; display: flex; }
+        .main-nav a { color: var(--text-color); text-decoration: none; font-weight: bold; padding: 10px 15px; transition: color 0.3s ease; }
+        .main-nav a:hover { color: var(--gradient-start); }
+        
+        /* --- Hero Section --- */
+        .hero { text-align: center; padding: 80px 20px; }
+        .gradient-text {
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            color: var(--white-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        /* --- Styling to put hosts side-by-side --- */
+.hosts-container {
+    display: flex; /* This aligns them in a row */
+    justify-content: center; /* Centers the two profiles */
+    align-items: flex-start;
+    gap: 60px; /* Adjust this to change the space between you and Frank */
+    margin-top: 40px;
+}
+
+.host-profile {
+    flex: 1; 
+    max-width: 400px;
+    text-align: center;
+}
+
+.host-profile img {
+    width: 200px; /* Adjusted to match your screenshot size */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+        /* --- Episode Grid --- */
+        .episodes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 0; }
+        .episode-card { background: var(--white-color); border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        /* --- Listen Now Section --- */
+#listen { padding: 60px 0; text-align: center; }
+.platform-links a {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 25px;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.platform-links a:hover {
+    background-color: var(--text-color);
+    color: var(--white-color);
+    transform: scale(1.05);
+}
+
+/* --- Contact Form --- */
+#contact-form { max-width: 600px; margin: 40px auto 0 auto; display: flex; flex-direction: column; text-align: left;}
+#contact-form label { font-weight: bold; margin-top: 15px; margin-bottom: 5px; }
+#contact-form input, #contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    background-color: var(--white-color);
+    margin-bottom: 10px; /* Extra insurance for spacing */
+}
+    
+}
+#contact-form button {
+    margin-top: 30px; /* This creates the gap you see in your 'before' photo */
+    cursor: pointer;
+    border: none; /* Keeps it looking smooth like your screenshot */
+}
+        /* --- Footer --- */
+        .main-footer { text-align: center; padding: 30px; border-top: 1px solid rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="The%20Scroll.jpg" alt="Logo">
+                The Scroll
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#episodes">Episodes</a></li>
+                    <li><a href="index.html#listen">Listen Now</a></li>
+                    <li><a href="blog.html">Boots' Patch Notes</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="gradient-text">The Scroll</h1>
+                <p>Your weekly dose of video game news, announcements, and deep dives.</p>
+                <a href="#episodes" class="cta-button">Check out the Latest Episode</a>
+            </div>
+        </section>
+<section id="about" class="content-section">
+    <div class="container">
+        <h2>Meet The Hosts</h2>
+        
+        <div class="hosts-container">
+            <div class="host-profile">
+                <img src="Boots.jpg" alt="A photo of LilacBoots">
+                <h3>LilacBoots</h3>
+                <p class="host-title">Host & Xbox/PC Lead</p>
+                <p>As a lifelong gamer who first fell in love with PC games at age seven, my world has always revolved around technology. I founded The Scroll in 2020 to create a dedicated space for our voices in the gaming world and to share my passion for the Xbox and PC ecosystems.</p>
+            </div>
+
+            <div class="host-profile">
+                <img src="Frank.jpg" alt="A photo of Frank Grouch">
+                <h3>Frank Grouch</h3>
+                <p class="host-title">Co-Host & Sony Correspondent</p>
+                <p>Frank joined the show in 2021, and the podcast has never been funnier. As our resident Sony Correspondent, he's always ready to debate the latest PlayStation news. Hailing from the Philly/Delaware area, Frank brings sharp wit and stand-up comedy experience to every show.</p>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="episodes" class="container">
+            <h2>Recent Episodes</h2>
+            <div class="episodes-grid">
+                </div>
+        </section>
+    </main>
+<section id="listen">
+    <div class="container">
+        <h2>Where to Listen</h2>
+        <p>The Scroll is available on all major podcast platforms. Subscribe so you never miss an episode!</p>
+        <div class="platform-links">
+            <a href="https://podcasts.apple.com/us/podcast/the-scroll/id1497899456" target="_blank">Apple Podcasts</a>
+            <a href="https://open.spotify.com/show/1YNqlVSlpZjNKJU6x4jzBl" target="_blank">Spotify</a>
+            <a href="https://www.youtube.com/@LilacBoots" target="_blank">YouTube</a>
+            <a href="https://music.amazon.com/podcasts/ef64fbe5-6fca-44c9-be92-7532546be69a/the-scroll" target="_blank">Amazon Music</a>
+            <a href="https://www.iheart.com/podcast/269-the-scroll-105609117/" target="_blank">iHeart Radio</a>
+        </div>
+    </div>
+</section>
+<section id="contact" class="content-section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto;">Interested in a promotion, collaboration, or just want to say hi? Drop us a line using the form below.</p>
+        
+        <form id="contact-form" action="https://formspree.io/f/xanjaker" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </div>
+</section>
+    <footer class="main-footer">
+        <p>© 2020-2026 The Scroll Podcast. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const podcastApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fanchor.fm%2Fs%2F26f6254%2Fpodcast%2Frss';
+        async function renderEpisodes() {
+            const episodesGrid = document.querySelector('.episodes-grid');
+            try {
+                const response = await fetch(podcastApiUrl);
+                const data = await response.json();
+                if (data.status === 'ok') {
+                    episodesGrid.innerHTML = '';
+                    data.items.slice(0, 3).forEach(episode => {
+                        episodesGrid.innerHTML += `
+                            <div class="episode-card">
+                                <h3>${episode.title}</h3>
+                                <p>${episode.description.substring(0, 150)}...</p>
+                                <a href="${episode.link}" target="_blank" class="cta-button">Listen Now</a>
+                            </div>`;
+                    });
+                }
+            } catch (e) { console.error(e); }
+        }
+        renderEpisodes();
+    </script>
+
+</body>
+</html>
