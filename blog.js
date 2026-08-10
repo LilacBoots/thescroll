@@ -18,6 +18,9 @@ const blogPosts = [
       <blockquote>
         <p><strong>The Bottom Line:</strong> Promotional marketing exists to inform the buyer, not to be monetized as an exclusive viewing event behind another monthly fee.</p>
       </blockquote>
+      <p>With Love,<br>
+      <strong>Lilac Boots</strong><br>
+      Host of The Scroll</p>
     `
   },
     {
