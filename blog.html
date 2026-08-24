@@ -79,20 +79,23 @@
         <section id="blog-feed"></section>
     </main>
 
-    <script src="blog.js"></script>
+  <script src="blog.js"></script>
     <script>
-    const feed = document.getElementById('blog-feed');
-    blogPosts.forEach(post => {
-        feed.innerHTML += `
-            <article class="editorial-entry">
-                <span class="category">${post.category}</span>
-                <h2>${post.title}</h2>
-                <p><em>${post.date}</em></p>
-                <div class="blog-content">
-                    ${post.content}
-                </div>
-            </article>`;
-    });
-</script>
+        const feed = document.getElementById('blog-feed');
+        if (typeof blogPosts !== 'undefined' && Array.isArray(blogPosts) && blogPosts.length > 0) {
+            feed.innerHTML = blogPosts.map(post => `
+                <article class="editorial-entry">
+                    <span class="category">${post.category}</span>
+                    <h2>${post.title}</h2>
+                    <p><em>${post.date}</em></p>
+                    <div class="blog-content">
+                        ${post.content}
+                    </div>
+                </article>
+            `).join('');
+        } else {
+            feed.innerHTML = '<p style="text-align:center;">No patch notes available right now. Check back soon!</p>';
+        }
+    </script>
 </body>
 </html>
