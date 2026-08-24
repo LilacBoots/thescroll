@@ -1,5 +1,5 @@
 const blogPosts = [
-    title: "Zero Sympathy for Rockstar: Paywalls, Corporate Overreach, and the Phantom Hunt",
+    { title: "Zero Sympathy for Rockstar: Paywalls, Corporate Overreach, and the Phantom Hunt",
         date: "August 24, 2026",
         category: "Industry Ethics",
         preview: "Take-Two's Kirkland & Ellis DMCA subpoenas are targeting Discord lurkers and chasing shadows over GTA 6 leaks. Here's why corporate greed and dragnet surveillance deserve zero sympathy.",
