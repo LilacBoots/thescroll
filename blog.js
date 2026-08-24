@@ -1,4 +1,34 @@
 const blogPosts = [
+    title: "Zero Sympathy for Rockstar: Paywalls, Corporate Overreach, and the Phantom Hunt",
+        date: "August 24, 2026",
+        category: "Industry Ethics",
+        preview: "Take-Two's Kirkland & Ellis DMCA subpoenas are targeting Discord lurkers and chasing shadows over GTA 6 leaks. Here's why corporate greed and dragnet surveillance deserve zero sympathy.",
+        content: `
+            <p>Whenever a massive leak disrupts a major AAA marketing rollout, the PR machine immediately kicks into high gear to play the victim. We are expected to mourn the disrupted timeline and pity the multibillion-dollar publisher. But after the anti-consumer choices Take-Two and Rockstar have pushed leading into <em>Grand Theft Auto VI</em>, they don't get to demand our sympathy.</p>
+
+            <h3>Monetizing Hype and Killing Ownership</h3>
+            <p>The loss of goodwill didn't start with security breaches—it started in the boardroom:</p>
+            <ul>
+                <li><strong>The Disc-less Retail Sham:</strong> Hopping onto the digital-only bandwagon by charging full retail price for a plastic case with nothing but a download voucher strips away genuine ownership.</li>
+                <li><strong>Paywalling Promotional Hype:</strong> Partnering with Netflix to put an "extended look" reveal behind a subscription tier turns basic marketing—traditionally a free community reveal—into a paid privilege.</li>
+                <li><strong>Disrespecting the Audience:</strong> When an IP feels bulletproof, publishers treat consumer loyalty as an expendable asset rather than something earned.</li>
+            </ul>
+
+            <h3>The Kirkland & Ellis Dragnet: Chasing Shadows and Doxxing Servers</h3>
+            <p>What makes this situation truly indefensible is the scorched-earth legal response. According to federal court filings, Take-Two's legal team at Kirkland & Ellis issued sweeping DMCA subpoenas targeting Microsoft and Discord to unmask the "CyberLeek" persona.</p>
+
+            <p>The filings lay out the reality of the hunt:</p>
+            <ul>
+                <li><strong>They Still Don't Know Who It Is:</strong> The subpoena doesn't list a real legal name—it only lists arbitrary online handles and Discord IDs. Despite the aggressive legal maneuvering, they are grasping at digital usernames.</li>
+                <li><strong>Likely a Group, Not a Lone Actor:</strong> The footprint points toward a distributed group rather than a single individual. The persona has repeatedly confirmed having no official Twitter/X presence, meaning the accounts popping up on that platform are just copycat grifters and impersonators recycling the leaks for engagement.</li>
+                <li><strong>Mass Surveillance on Bystanders:</strong> The filings demand telemetry, IP logs, linked accounts, and identifiers for <em>everyone</em> who communicated in several targeted Discord servers since June 1.</li>
+            </ul>
+
+            <p>Dragging passive community lurkers and arbitrary onlookers into federal subpoenas while weaponizing legal mechanisms to save face over leaked marketing is an egregious overreach. Until Rockstar learns to secure its own internal pipeline and respect both consumer ownership and digital privacy, they have no right to ask for the community's tears.</p>
+
+            <p><strong>Get Rekt,<br>LilacBoots</strong></p>
+        `
+    },
     {
     title: "First Digital-Only, Now Subscription-Only Marketing: Rockstar's Weird 2026 Shift",
     date: "August 10, 2026",
