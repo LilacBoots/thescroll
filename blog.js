@@ -1,4 +1,26 @@
 const blogPosts = [
+    {
+    title: "Tired of the Treadmill: Why I'm Sticking to Indies and Going Retro",
+    date: "October 12, 2026",
+    category: "Editorial",
+    preview: "No new episode this week! Instead, let's talk about subscription fatigue, why I'm skipping the $80 AAA hype train, and finding joy in community modding and retro backlogs.",
+    content: `
+      <p>I’m tired, y’all. Scouring through pages and pages of the "next big thing." Doomscrolling about how we can’t afford anything. Sony refusing to play ball when it comes to ownership. It’s just too much.</p>
+
+      <p>My feelings on this topic aren’t exactly new. You can say the catalyst happened when Rockstar decided not to make a physical disc for their upcoming <em>GTA VI</em> title, but it honestly began before that. I purchased a new PC for myself back in 2022. Not anything super spectacular, but definitely an upgrade to what I’ve always had before—Nvidia GPU, i7 processor, nothing crazy. I also made sure it was a desktop PC because I refuse to give in to the unnecessary demand of laptop parts. But I digress. When my PC was purchased, I was just excited to play the games I already had on a better machine. I wasn’t instantly thinking about some AAA title that I’d be the best at. I wasn’t even thinking about streaming any of my usual titles. I just wanted something that I can work on that didn’t piss me off or freeze every 10 minutes.</p>
+
+      <p>But now, with how unaffordable everything seems to have become in a general sense, I think I’ll stick with my indies. If I happen to get a great game working on my PC, then great. I seriously doubt I’ll be the first in line to buy it unless I just happen to already be a fan of the franchise *cough* <em>Assassin’s Creed: Resynced</em> *cough*.</p>
+
+      <p>I spoke on the show about the recent modding the community has been doing, and it’s basically getting me back into the excitement of playing video games again. I love the idea of going back and discovering titles I wasn’t old enough to purchase on my own—or wasn't even alive for yet. There is something genuinely refreshing about setting up your own space, leaning into local setups, and appreciating completed games that don’t demand a monthly fee just to sit on your hard drive.</p>
+
+      <p>Between community preservation efforts and incredible indies, that's where my gaming joy lives right now. It beats running on the corporate hamster wheel any day.</p>
+
+      <p>What about you? Are you feeling the modern gaming burnout, or are you retreating into backlogs and older classics too?</p>
+
+      <p>— <em>Lilac Boots</em></p>
+    `
+  },
+    
     { title: "Zero Sympathy for Rockstar: Paywalls, Corporate Overreach, and the Phantom Hunt",
         date: "August 24, 2026",
         category: "Industry Ethics",
